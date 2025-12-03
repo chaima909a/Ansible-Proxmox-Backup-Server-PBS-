@@ -14,3 +14,5 @@ Automatisation des **sauvegardes/restaurations** des VMs Proxmox via **Ansible**
 
 ## 🔧 Tech
 Ansible, PBS, vzdump (snapshot, zstd, maxfiles), SSH, Cron, Zabbix. 【turn3file0】
+
+✳️ Projet réalisé par Chayma ABIDI, 2025.
