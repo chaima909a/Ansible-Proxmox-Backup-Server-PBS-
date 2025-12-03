@@ -1,0 +1,2 @@
+# exécuter toutes les nuits à 02:00
+0 2 * * *  /usr/bin/ansible-playbook -i /path/inventory.ini /path/backup.yml
