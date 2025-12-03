@@ -1,5 +1,0 @@
-storage_name: "pbs-local"     # cible PBS
-backup_mode: "snapshot"       # production-friendly
-backup_compress: "zstd"       # rapide/efficace
-backup_maxfiles: 5            # rétention
-exclude_path: "/var/log"      # exemple d’exclusion
