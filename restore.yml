@@ -1,0 +1,10 @@
+---
+- name: Restaurer une VM depuis PBS
+  hosts: proxmox_nodes
+  become: yes
+  vars:
+    vmid: "101"
+    backup_file: "/mnt/pbs/backup/vm-101-disk-2025_12_01.vma.zst"
+  tasks:
+    - name: Restaurer
+      ansible.builtin.shell: qmrestore {{ backup_file }} {{ vmid }} --storage {{ storage_name }}
