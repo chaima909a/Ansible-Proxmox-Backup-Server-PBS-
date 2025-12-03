@@ -1,0 +1,15 @@
+---
+- name: Sauvegarde VMs Proxmox vers PBS
+  hosts: proxmox_nodes
+  become: yes
+  tasks:
+    - name: Lancer la sauvegarde de toutes les VMs (snapshot + zstd + retention)
+      ansible.builtin.shell: >
+        vzdump --all 1
+        --mode {{ backup_mode }}
+        --storage {{ storage_name }}
+        --compress {{ backup_compress }}
+        --maxfiles {{ backup_maxfiles }}
+        --exclude {{ exclude_path }}
+      args:
+        warn: false
